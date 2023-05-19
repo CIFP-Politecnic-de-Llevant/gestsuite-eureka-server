@@ -1,6 +1,7 @@
 FROM maven:3-amazoncorretto-11 as develop-stage-eureka
 COPY . .
-RUN mvn clean install spring-boot:run -f pom.xml
+RUN mvn clean install -f pom.xml
+ENTRYPOINT ["mvn","spring-boot:run"]
 
 FROM maven:3-amazoncorretto-11 as build-stage-eureka
 WORKDIR /resources
