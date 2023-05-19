@@ -1,3 +1,6 @@
+FROM maven:3-amazoncorretto-11 as develop-stage-eureka
+RUN mvn spring-boot:run
+
 FROM maven:3-amazoncorretto-11 as build-stage-eureka
 WORKDIR /resources
 COPY . .
