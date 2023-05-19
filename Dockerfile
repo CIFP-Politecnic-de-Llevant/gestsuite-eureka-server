@@ -1,4 +1,5 @@
 FROM maven:3-amazoncorretto-11 as develop-stage-eureka
+COPY . .
 RUN mvn clean install spring-boot:run -f pom.xml
 
 FROM maven:3-amazoncorretto-11 as build-stage-eureka
