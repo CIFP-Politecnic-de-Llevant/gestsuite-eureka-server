@@ -1,6 +1,7 @@
 FROM maven:3-amazoncorretto-11 as build-stage-eureka
 WORKDIR /resources
 COPY . .
+RUN mvn wrapper:wrapper
 RUN mvn clean compile install package -f pom.xml
 
 FROM amazoncorretto:11-alpine-jdk as production-stage-eureka
