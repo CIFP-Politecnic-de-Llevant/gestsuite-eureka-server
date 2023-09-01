@@ -1,4 +1,4 @@
-package cat.iesmanacor.eurekaserver;
+package cat.politecnicllevant.eurekaserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
